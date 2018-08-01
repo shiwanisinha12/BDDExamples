@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<script type="text/javascript">
+function validate()
+{
+	var username=document.getElementById("txt1").value;
+	var password=document.getElementById("txt2").value;
+
+	if((username=="shiwani") && (password=="Shiwani@123"))
+	{
+	window.open("success.html");
+	
+	}
+	else if((username=="shiwani") && (password!="Shiwani@123"))
+		{
+		window.alert("Please enter correct password");
+	
+		}
+	else if((username!="shiwani") && (password=="Shiwani@123"))
+	{
+	window.alert("Please enter correct username");
+
+	}
+	else
+		{
+		window.alert("Something went wrong");
+		}
+	
+		
+}
+
+</script>
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td>UserName :</td>
+<td><input type="text" id="txt1" name="user"/></td>
+</tr>
+<tr>
+<td>Password :</td>
+<td><input type="password" id="txt2" name="pass"/></td>
+</tr>
+<tr>
+<td><input type="submit" id="btn" value="Sign in" onclick="javascript:validate()"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
